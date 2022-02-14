@@ -104,7 +104,7 @@ public class Practice {
                 .collect(Collectors.toList());
         return jobHis;
 
-        //Cundullah solution
+        //Another solution
       //return jobHistoryService.readAll();
     }
 

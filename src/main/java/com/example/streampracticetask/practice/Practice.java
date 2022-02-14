@@ -42,7 +42,7 @@ public class Practice {
 
     // Display all the employees
     public static List<Employee> getAllEmployees() {
-        //TODO Implement the method
+
         List<Employee> allEmp = employeeService.readAll().stream()
                 .collect(Collectors.toList());
         return allEmp;
@@ -52,7 +52,7 @@ public class Practice {
 
     // Display all the countries
     public static List<Country> getAllCountries() {
-        //TODO Implement the method
+
         List<Country> allCon = countryService.readAll().stream()
                 .collect(Collectors.toList());
         return allCon;
@@ -61,7 +61,7 @@ public class Practice {
 
     // Display all the departments
     public static List<Department> getAllDepartments() {
-        //TODO Implement the method
+
         List<Department> allDepList = departmentService.readAll().stream()
                 .collect(Collectors.toList());
         return allDepList;
@@ -72,7 +72,7 @@ public class Practice {
 
     // Display all the jobs
     public static List<Job> getAllJobs() {
-        //TODO Implement the method
+
         List<Job> allJob= jobService.readAll().stream()
                 .collect(Collectors.toList());
         return allJob;
@@ -81,7 +81,7 @@ public class Practice {
 
     // Display all the locations
     public static List<Location> getAllLocations() {
-        //TODO Implement the method
+
         List<Location> allLoc = locationService.readAll().stream()
                 .collect(Collectors.toList());
         return allLoc;
@@ -90,7 +90,7 @@ public class Practice {
 
     // Display all the regions
     public static List<Region> getAllRegions() {
-        //TODO Implement the method
+
         List<Region> allReg = regionService.readAll().stream()
                 .collect(Collectors.toList());
         return allReg;
@@ -99,7 +99,7 @@ public class Practice {
 
     // Display all the job histories
     public static List<JobHistory> getAllJobHistories() {
-        //TODO Implement the method
+
         List<JobHistory> jobHis = jobHistoryService.readAll().stream()
                 .collect(Collectors.toList());
         return jobHis;
@@ -196,7 +196,7 @@ public class Practice {
 //                .filter(m->m.getDepartment().getDepartmentName().equals("IT"))
 //                .anyMatch(n->n.getSalary()>2000);
 
-        //Cundullah solution
+        //Another solution
         return getAllEmployees().stream()
                 .filter(employee -> employee.getDepartment().getDepartmentName().equals("IT"))
                 .noneMatch(employee -> employee.getSalary()<2000);
